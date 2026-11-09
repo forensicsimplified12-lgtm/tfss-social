@@ -13,7 +13,8 @@ Post fields:
   options      list of 4 option texts (A-D, in the PDF's order)
   answer       "A" | "B" | "C" | "D"
   explanation  2-4 sentences, from the PDF
-  confusion    optional "Common confusion" text; <b>..</b> allowed
+  confusion    optional box text; <b>..</b> allowed
+  box_title    optional, "COMMON CONFUSION" (default, gets ⚠) or "QUICK RECALL"
   source       e.g. "From NET-Cracker Module 9 · Digital & Cyber Forensics"
   promo        {headline (HTML; wrap accent words in <g>..</g>), sub (Lora italic line),
                 checks [4 short lines], price ("₹90"), price_label, cta,
@@ -118,7 +119,9 @@ def slides(p):
     opts = "".join(f"<div class='opt'><b>{letters[i]}</b><span>{e(o)}</span></div>" for i, o in enumerate(p["options"]))
     s1 = page(f"<h1>Can you <g>crack this?</g></h1><div class='q'>{e(p['question'])}</div><div class='opts'>{opts}</div>",
               "💬 Comment A, B, C or D · Swipe →", site)
-    conf = (f"<div class='conf'><h3><span style=\"font-family:'DejaVu Sans'\">⚠</span> COMMON CONFUSION</h3><p>{p['confusion']}</p></div>" if p.get("confusion") else "")
+    bt = p.get("box_title", "COMMON CONFUSION").upper()
+    icon = "<span style=\"font-family:'DejaVu Sans'\">⚠</span> " if bt == "COMMON CONFUSION" else ""
+    conf = (f"<div class='conf'><h3>{icon}{e(bt)}</h3><p>{p['confusion']}</p></div>" if p.get("confusion") else "")
     right = p["options"][letters.index(ans)]
     s2 = page(f"<h1>The answer is <g>{ans}</g></h1>"
               f"<div class='opts'><div class='opt right'><b>{ans}</b><span>{e(right)}</span></div></div>"
