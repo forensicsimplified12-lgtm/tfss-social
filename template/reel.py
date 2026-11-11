@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""TFSS faceless quiz Reel maker (1080x1920 MP4, ~15 s, tick + reveal sounds, no voice).
+"""TFSS faceless quiz Reel maker (1080x1920 MP4, 15 s, signature lo-fi track + ticks, no voice).
 
 Usage:  python3 reel.py posts.json OUTPUT_DIR [id ...]
 
@@ -122,10 +122,21 @@ def tone_wav(path, total):
     for i in range(N_TICK):
         add(T_Q + i * T_TICK, 0.09, [1500], 0.45, 40)
     t_rev = T_Q + N_TICK * T_TICK
-    add(t_rev, 0.9, [880, 1320, 1760], 0.5, 4)
+    add(t_rev, 0.9, [880, 1320, 1760], 0.3, 4)
+    import numpy as np
+    sfx = np.array(buf)
+    bgm_path = HERE / "tfss-signature-bgm.wav"
+    if not bgm_path.exists():
+        import bgm
+        bgm.save(bgm.compose(), bgm_path)
+    with wave.open(str(bgm_path)) as w:
+        music = np.frombuffer(w.readframes(w.getnframes()), "<i2").astype(float) / 32767
+    music = np.pad(music, (0, max(0, len(sfx) - len(music))))[: len(sfx)]
+    mix = 0.62 * music + 0.55 * sfx
+    mix = mix / max(1.0, np.max(np.abs(mix)) / 0.95)
     with wave.open(str(path), "w") as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(sr)
-        w.writeframes(b"".join(struct.pack("<h", int(max(-1, min(1, v)) * 30000)) for v in buf))
+        w.writeframes((np.clip(mix, -1, 1) * 32767).astype("<i2").tobytes())
 
 
 def make(posts, out, only=None):
