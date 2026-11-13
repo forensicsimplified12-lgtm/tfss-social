@@ -19,3 +19,9 @@ Fonts are bundled in `fonts/` (Poppins and Lora, SIL Open Font License).
 Makes `<id>-reel.mp4` (1080×1920, 15 s: question → 5-second countdown with ticks → answer + explanation → follow card)
 and `<id>-reel-cover.jpg`. Same posts.json as the carousels; optional `reel_explain` gives a shorter answer-screen line.
 No voice, no music (Instagram music can only be added in the app).
+
+## Colour palettes
+
+`template/palettes.py` has 10 TFSS palettes (classic, plum-pink, wine, charcoal-ember, aubergine-coral,
+maroon-gold, violet-rose, cocoa-orange, raspberry, dusk-amber). Set `"palette": 0-9` (or a name) per post
+in posts.json / reels.json; rotate them in posting order. Without it, the palette is picked from the post id.

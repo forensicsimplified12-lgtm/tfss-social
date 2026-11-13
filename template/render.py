@@ -22,6 +22,8 @@ Post fields:
 Text in the HTML-allowed fields is not escaped; everything else is.
 """
 import base64, html, json, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import palettes
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
@@ -47,47 +49,47 @@ CSS = """
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:1080px;height:1350px;overflow:hidden}
 body{font-family:'Poppins','Noto Color Emoji',sans-serif;color:#fff;
- background:radial-gradient(ellipse 900px 700px at 820px 260px,#5b1d7a 0%,rgba(91,29,122,0) 70%),
- linear-gradient(160deg,#1f0a2e 0%,#35104f 55%,#24093a 100%);position:relative}
+ background:radial-gradient(ellipse 900px 700px at 820px 260px,var(--glow) 0%,transparent 70%),
+ linear-gradient(160deg,var(--bg1) 0%,var(--bg2) 55%,var(--bg3) 100%);position:relative}
 .wm{position:absolute;inset:-300px;display:flex;flex-wrap:wrap;gap:60px 120px;align-content:flex-start;
  transform:rotate(-24deg);opacity:.07;font-weight:700;font-size:124px;letter-spacing:4px;pointer-events:none}
 .rings{position:absolute;right:-6px;top:805px;width:310px;height:310px;pointer-events:none}
-.rings i{position:absolute;border:2px solid rgba(249,115,22,.28);border-radius:50%}
+.rings i{position:absolute;border:2px solid var(--ring);border-radius:50%}
 .wrap{position:absolute;left:80px;right:80px;top:88px;bottom:0}
-.pill{display:inline-block;height:62px;line-height:58px;padding:0 26px;border:2px solid #facc15;border-radius:31px;
- color:#facc15;font-weight:700;font-size:24px;letter-spacing:.3px}
+.pill{display:inline-block;height:62px;line-height:58px;padding:0 26px;border:2px solid var(--hl);border-radius:31px;
+ color:var(--hl);font-weight:700;font-size:24px;letter-spacing:.3px}
 .logo{position:absolute;right:84px;top:74px;width:88px;height:88px}
 .content{position:absolute;left:80px;right:80px;top:222px;bottom:150px;display:flex;flex-direction:column}
 h1{font-weight:700;font-size:calc(72px*var(--s));line-height:1.08;letter-spacing:-.5px}
-g,.g{background:linear-gradient(90deg,#f97316,#ef4444);-webkit-background-clip:text;background-clip:text;color:transparent}
+g,.g{background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .q{font-weight:700;font-size:calc(47px*var(--s));line-height:1.4;max-width:890px;margin-top:calc(42px*var(--s))}
 .opts{margin-top:calc(46px*var(--s));display:flex;flex-direction:column;gap:calc(26px*var(--s))}
 .opt{display:flex;align-items:center;min-height:calc(116px*var(--s));padding:calc(18px*var(--s)) 32px;border-radius:18px;
  background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.13)}
-.opt b{flex:none;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,#f97316,#ef4444);
+.opt b{flex:none;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,var(--a1),var(--a2));
  display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;margin-right:28px}
 .opt span{font-size:calc(40px*var(--s));line-height:1.3}
-.opt.right{background:rgba(250,204,21,.09);border-color:#facc15}
-.opt.right b{background:#facc15;color:#1f0a2e}
+.opt.right{background:var(--hlbg);border-color:var(--hl)}
+.opt.right b{background:var(--hl);color:var(--bg1)}
 .exp{font-size:calc(36px*var(--s));line-height:1.45;margin-top:calc(42px*var(--s))}
-.conf{margin-top:calc(42px*var(--s));padding:calc(36px*var(--s)) 44px;border-radius:22px;border-left:8px solid #facc15;
+.conf{margin-top:calc(42px*var(--s));padding:calc(36px*var(--s)) 44px;border-radius:22px;border-left:8px solid var(--hl);
  background:rgba(255,255,255,.07)}
-.conf h3{color:#facc15;font-size:calc(32px*var(--s));font-weight:700;letter-spacing:1px;margin-bottom:14px}
+.conf h3{color:var(--hl);font-size:calc(32px*var(--s));font-weight:700;letter-spacing:1px;margin-bottom:14px}
 .conf p{font-size:calc(33px*var(--s));line-height:1.45}
-.src{margin-top:calc(34px*var(--s));color:#c9b3e6;font-size:28px}
-.sub{font-family:'Lora',serif;font-style:italic;font-size:calc(38px*var(--s));color:#d9c8ee;margin-top:calc(28px*var(--s))}
+.src{margin-top:calc(34px*var(--s));color:var(--muted);font-size:28px}
+.sub{font-family:'Lora',serif;font-style:italic;font-size:calc(38px*var(--s));color:var(--soft);margin-top:calc(28px*var(--s))}
 .checks{list-style:none;margin-top:calc(52px*var(--s));display:flex;flex-direction:column;gap:calc(40px*var(--s))}
 .checks li{font-size:calc(38px*var(--s));display:flex;gap:26px}
-.checks li:before{content:'✓';color:#facc15;font-weight:400}
+.checks li:before{content:'✓';color:var(--hl);font-weight:400}
 .price{margin-top:auto;display:flex;align-items:baseline;gap:28px}
 .price .g{font-weight:700;font-size:130px;line-height:1}
-.price span{font-size:32px;color:#d9c8ee}
+.price span{font-size:32px;color:var(--soft)}
 .price span.g{color:transparent}
 .cta{margin-top:40px;align-self:flex-start;height:116px;line-height:116px;padding:0 48px;border-radius:58px;
- background:linear-gradient(90deg,#f97316,#ef4444);font-weight:700;font-size:40px}
+ background:linear-gradient(90deg,var(--a1),var(--a2));font-weight:700;font-size:40px}
 .foot{position:absolute;left:80px;right:80px;bottom:62px;display:flex;justify-content:space-between;align-items:center;font-size:30px}
-.foot .l{color:#facc15;font-weight:700}
-.foot .r{color:#d9c8ee}
+.foot .l{color:var(--hl);font-weight:700}
+.foot .r{color:var(--soft)}
 """
 
 FIT_JS = """
@@ -133,7 +135,8 @@ def slides(p):
               f"<div class='price'><span class='g'>{e(pr['price'])}</span><span>{e(pr['price_label'])}</span></div>"
               f"<div class='cta'>{e(pr['cta'])}</div>",
               e(pr.get("foot_left", "")), e(pr.get("foot_right", site)))
-    return [x.replace("{TAG}", tag) for x in (s1, s2, s3)]
+    st = palettes.style(p)
+    return [x.replace("{TAG}", tag).replace("<body style='--s:1'>", f"<body style='{st}'>") for x in (s1, s2, s3)]
 
 
 def main(spec, out):

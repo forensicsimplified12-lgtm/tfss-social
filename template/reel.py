@@ -18,6 +18,7 @@ from playwright.sync_api import sync_playwright
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from render import font_face, b64, HERE  # noqa: E402
+import palettes  # noqa: E402
 
 W, H = 1080, 1920
 FPS = 30
@@ -27,42 +28,42 @@ CSS = """
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:1080px;height:1920px;overflow:hidden}
 body{font-family:'Poppins','Noto Color Emoji',sans-serif;color:#fff;position:relative;
- background:radial-gradient(ellipse 1000px 900px at 820px 420px,#5b1d7a 0%,rgba(91,29,122,0) 70%),
- linear-gradient(165deg,#1f0a2e 0%,#35104f 55%,#24093a 100%)}
+ background:radial-gradient(ellipse 1000px 900px at 820px 420px,var(--glow) 0%,transparent 70%),
+ linear-gradient(165deg,var(--bg1) 0%,var(--bg2) 55%,var(--bg3) 100%)}
 .wm{position:absolute;inset:-400px;display:flex;flex-wrap:wrap;gap:60px 120px;align-content:flex-start;
  transform:rotate(-24deg);opacity:.06;font-weight:700;font-size:124px;letter-spacing:4px}
 .rings{position:absolute;right:-60px;top:1180px;width:360px;height:360px}
-.rings i{position:absolute;border:2px solid rgba(249,115,22,.25);border-radius:50%}
+.rings i{position:absolute;border:2px solid var(--ring);border-radius:50%}
 .top{position:absolute;left:80px;right:80px;top:230px;display:flex;justify-content:space-between;align-items:center}
-.pill{height:66px;line-height:62px;padding:0 28px;border:2px solid #facc15;border-radius:33px;color:#facc15;font-weight:700;font-size:27px}
+.pill{height:66px;line-height:62px;padding:0 28px;border:2px solid var(--hl);border-radius:33px;color:var(--hl);font-weight:700;font-size:27px}
 .logo{width:96px;height:96px}
 .main{position:absolute;left:80px;right:80px;top:350px;bottom:650px;display:flex;flex-direction:column}
 h1{font-weight:700;font-size:calc(80px*var(--s));line-height:1.08}
-g{background:linear-gradient(90deg,#f97316,#ef4444);-webkit-background-clip:text;background-clip:text;color:transparent}
+g{background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .q{font-weight:700;font-size:calc(52px*var(--s));line-height:1.36;margin-top:calc(40px*var(--s))}
 .opts{margin-top:calc(40px*var(--s));display:flex;flex-direction:column;gap:calc(22px*var(--s))}
 .opt{display:flex;align-items:center;min-height:calc(112px*var(--s));padding:calc(18px*var(--s)) 34px;border-radius:20px;
  background:rgba(255,255,255,.07);border:2px solid rgba(255,255,255,.14);transition:none}
-.opt b{flex:none;width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,#f97316,#ef4444);
+.opt b{flex:none;width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,var(--a1),var(--a2));
  display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:700;margin-right:30px}
 .opt span{font-size:calc(44px*var(--s));line-height:1.28}
 .opt.dim{opacity:.32}
-.opt.right{background:rgba(250,204,21,.12);border:3px solid #facc15}
-.opt.right b{background:#facc15;color:#1f0a2e}
+.opt.right{background:var(--hlbg);border:3px solid var(--hl)}
+.opt.right b{background:var(--hl);color:var(--bg1)}
 .timer{position:absolute;left:50%;transform:translateX(-50%);bottom:455px;width:180px;height:180px;border-radius:50%;
  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:92px;
- background:conic-gradient(#facc15 calc(var(--p)*1turn),rgba(255,255,255,.12) 0);}
-.timer:before{content:'';position:absolute;inset:12px;border-radius:50%;background:#2a0d40}
+ background:conic-gradient(var(--hl) calc(var(--p)*1turn),rgba(255,255,255,.12) 0);}
+.timer:before{content:'';position:absolute;inset:12px;border-radius:50%;background:var(--bg2)}
 .timer span{position:relative}
-.hint{position:absolute;left:80px;right:80px;bottom:440px;text-align:center;color:#facc15;font-weight:700;font-size:40px}
-.exp{margin-top:calc(40px*var(--s));padding:calc(34px*var(--s)) 40px;border-radius:22px;border-left:8px solid #facc15;
+.hint{position:absolute;left:80px;right:80px;bottom:440px;text-align:center;color:var(--hl);font-weight:700;font-size:40px}
+.exp{margin-top:calc(40px*var(--s));padding:calc(34px*var(--s)) 40px;border-radius:22px;border-left:8px solid var(--hl);
  background:rgba(255,255,255,.08);font-size:calc(38px*var(--s));line-height:1.42}
-.src{margin-top:24px;color:#c9b3e6;font-size:28px}
+.src{margin-top:24px;color:var(--muted);font-size:28px}
 .end{position:absolute;left:80px;right:80px;top:420px;bottom:430px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:44px}
 .end img{width:200px;height:200px}
 .end h2{font-size:78px;line-height:1.1;font-weight:700}
-.end p{font-size:44px;color:#d9c8ee}
-.cta{height:120px;line-height:120px;padding:0 56px;border-radius:60px;background:linear-gradient(90deg,#f97316,#ef4444);font-weight:700;font-size:44px}
+.end p{font-size:44px;color:var(--soft)}
+.cta{height:120px;line-height:120px;padding:0 56px;border-radius:60px;background:linear-gradient(90deg,var(--a1),var(--a2));font-weight:700;font-size:44px}
 """
 
 FIT_JS = """() => { const c=document.querySelector('.main'); if(!c) return 1; let s=1;
@@ -102,7 +103,8 @@ def frames(p):
            f"<h2>Got it right?<br><g>Comment</g> ✅</h2><p>New forensic PYQ quiz every<br>Mon · Wed · Fri</p>"
            f"<div class='cta'>Follow @forensicsimplified12</div><p>🎁 Free NET-Cracker Module 9 · link in bio</p></div>")
     out.append(("end", shell(end)))
-    return out
+    st = palettes.style(p)
+    return [(n, h.replace("<body style='--s:1'>", f"<body style='{st}'>")) for n, h in out]
 
 
 def tone_wav(path, total):
