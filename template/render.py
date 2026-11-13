@@ -48,11 +48,11 @@ def font_face():
 CSS = """
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:1080px;height:1350px;overflow:hidden}
-body{font-family:'Poppins','Noto Color Emoji',sans-serif;color:#fff;
+body{font-family:'Poppins','Noto Color Emoji',sans-serif;color:var(--fg);
  background:radial-gradient(ellipse 900px 700px at 820px 260px,var(--glow) 0%,transparent 70%),
  linear-gradient(160deg,var(--bg1) 0%,var(--bg2) 55%,var(--bg3) 100%);position:relative}
 .wm{position:absolute;inset:-300px;display:flex;flex-wrap:wrap;gap:60px 120px;align-content:flex-start;
- transform:rotate(-24deg);opacity:.07;font-weight:700;font-size:124px;letter-spacing:4px;pointer-events:none}
+ transform:rotate(-24deg);color:var(--wm);opacity:.07;font-weight:700;font-size:124px;letter-spacing:4px;pointer-events:none}
 .rings{position:absolute;right:-6px;top:805px;width:310px;height:310px;pointer-events:none}
 .rings i{position:absolute;border:2px solid var(--ring);border-radius:50%}
 .wrap{position:absolute;left:80px;right:80px;top:88px;bottom:0}
@@ -65,15 +65,15 @@ g,.g{background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-cl
 .q{font-weight:700;font-size:calc(47px*var(--s));line-height:1.4;max-width:890px;margin-top:calc(42px*var(--s))}
 .opts{margin-top:calc(46px*var(--s));display:flex;flex-direction:column;gap:calc(26px*var(--s))}
 .opt{display:flex;align-items:center;min-height:calc(116px*var(--s));padding:calc(18px*var(--s)) 32px;border-radius:18px;
- background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.13)}
+ background:var(--card);border:2px solid var(--cardb)}
 .opt b{flex:none;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,var(--a1),var(--a2));
- display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;margin-right:28px}
+ display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;margin-right:28px;color:#fff}
 .opt span{font-size:calc(40px*var(--s));line-height:1.3}
 .opt.right{background:var(--hlbg);border-color:var(--hl)}
-.opt.right b{background:var(--hl);color:var(--bg1)}
+.opt.right b{background:var(--hl);color:var(--onhl)}
 .exp{font-size:calc(36px*var(--s));line-height:1.45;margin-top:calc(42px*var(--s))}
 .conf{margin-top:calc(42px*var(--s));padding:calc(36px*var(--s)) 44px;border-radius:22px;border-left:8px solid var(--hl);
- background:rgba(255,255,255,.07)}
+ background:var(--card)}
 .conf h3{color:var(--hl);font-size:calc(32px*var(--s));font-weight:700;letter-spacing:1px;margin-bottom:14px}
 .conf p{font-size:calc(33px*var(--s));line-height:1.45}
 .src{margin-top:calc(34px*var(--s));color:var(--muted);font-size:28px}
@@ -86,7 +86,7 @@ g,.g{background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-cl
 .price span{font-size:32px;color:var(--soft)}
 .price span.g{color:transparent}
 .cta{margin-top:40px;align-self:flex-start;height:116px;line-height:116px;padding:0 48px;border-radius:58px;
- background:linear-gradient(90deg,var(--a1),var(--a2));font-weight:700;font-size:40px}
+ background:linear-gradient(90deg,var(--a1),var(--a2));font-weight:700;font-size:40px;color:#fff}
 .foot{position:absolute;left:80px;right:80px;bottom:62px;display:flex;justify-content:space-between;align-items:center;font-size:30px}
 .foot .l{color:var(--hl);font-weight:700}
 .foot .r{color:var(--soft)}

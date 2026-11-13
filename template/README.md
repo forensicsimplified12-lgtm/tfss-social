@@ -22,6 +22,7 @@ No voice, no music (Instagram music can only be added in the app).
 
 ## Colour palettes
 
-`template/palettes.py` has 10 TFSS palettes (classic, plum-pink, wine, charcoal-ember, aubergine-coral,
-maroon-gold, violet-rose, cocoa-orange, raspberry, dusk-amber). Set `"palette": 0-9` (or a name) per post
-in posts.json / reels.json; rotate them in posting order. Without it, the palette is picked from the post id.
+`template/palettes.py` has 16 TFSS palettes: 10 dark (0-9: classic, plum-pink, wine, charcoal-ember, aubergine-coral,
+maroon-gold, violet-rose, cocoa-orange, raspberry, dusk-amber) and 6 light (10-15: lavender-light, peach-cream,
+rose-blush, sand-gold, lilac-coral, ivory-plum). Set `"palette": 0-15` (or a name) per post
+in posts.json / reels.json; rotate them in posting order, about 2 dark : 1 light. Without it, the palette is picked from the post id.
