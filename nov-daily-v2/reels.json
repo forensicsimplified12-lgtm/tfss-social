@@ -1,0 +1,274 @@
+[
+ {
+  "id": "nd-14",
+  "tag": "UGC NET · PYQ 2019 · Q66",
+  "question": "The antidote for methanol poisoning is:",
+  "options": [
+   "Ethylene glycol",
+   "Milk of magnesia",
+   "Amphetamine",
+   "Ethyl alcohol"
+  ],
+  "answer": "D",
+  "explanation": "Ethanol competes with methanol for alcohol dehydrogenase, blocking its conversion into toxic formaldehyde and formic acid.",
+  "reel_explain": "Ethanol competes with methanol for alcohol dehydrogenase, blocking its conversion into toxic formaldehyde and formic acid.",
+  "source": "From NET-Cracker Module 4 · Toxicology",
+  "palette": 1
+ },
+ {
+  "id": "nd-15",
+  "tag": "FACT 2026 · Biology · Section B",
+  "question": "A bloodstain on a horizontal surface is 8 mm wide and 16 mm long. At what angle did the drop strike?",
+  "options": [
+   "15°",
+   "45°",
+   "30°",
+   "60°"
+  ],
+  "answer": "C",
+  "explanation": "Impact angle = sin⁻¹(width ÷ length) = sin⁻¹(8/16) = sin⁻¹(0.5) = 30°.",
+  "reel_explain": "Impact angle = sin⁻¹(width ÷ length) = sin⁻¹(8/16) = sin⁻¹(0.5) = 30°.",
+  "source": "From FACToids of Forensic Biological Sciences · Q54",
+  "palette": 2
+ },
+ {
+  "id": "nd-16",
+  "tag": "UGC NET · PYQ 2019 · Q95",
+  "question": "In handwriting comparison, 't' crossings and 'i'/'j' dots are considered as:",
+  "options": [
+   "Embellishments",
+   "Diacritics",
+   "Abbreviation",
+   "Minuscules"
+  ],
+  "answer": "B",
+  "explanation": "Diacritics are the small dots and cross-strokes added to letters; their placement and shape are habitual and compared closely.",
+  "reel_explain": "Diacritics are the small dots and cross-strokes added to letters; their placement and shape are habitual and compared closely.",
+  "source": "From NET-Cracker Module 1 · Questioned Documents",
+  "palette": 10
+ },
+ {
+  "id": "nd-17",
+  "tag": "FACT 2026 · Biology · Section B",
+  "question": "Which immunoglobulin mainly crosses the placenta in Rh incompatibility?",
+  "options": [
+   "IgA",
+   "IgE",
+   "IgM",
+   "IgG"
+  ],
+  "answer": "D",
+  "explanation": "IgG is the only antibody class that crosses the placenta, which is why it causes haemolytic disease of the newborn.",
+  "reel_explain": "IgG is the only antibody class that crosses the placenta, which is why it causes haemolytic disease of the newborn.",
+  "source": "From FACToids of Forensic Biological Sciences · Q90",
+  "palette": 3
+ },
+ {
+  "id": "nd-18",
+  "tag": "UGC NET · PYQ 2020 · Q80",
+  "question": "An Android device's encrypted data can be wiped remotely using:",
+  "options": [
+   "Find My Phone service",
+   "Google Sync",
+   "iCloud",
+   "Search My Sync"
+  ],
+  "answer": "A",
+  "explanation": "Google's Find My Device can remotely lock or wipe a lost Android phone. iCloud is Apple's equivalent.",
+  "reel_explain": "Google's Find My Device can remotely lock or wipe a lost Android phone. iCloud is Apple's equivalent.",
+  "source": "From NET-Cracker Module 9 · Cyber Forensics (free)",
+  "palette": 4
+ },
+ {
+  "id": "nd-19",
+  "tag": "FACT 2026 · Ballistics · Section B",
+  "question": "How much constriction is there in a Quarter Choke shotgun?",
+  "options": [
+   "0.25 cm",
+   "0.25 mm",
+   "10/4 mm",
+   "1/2 mm"
+  ],
+  "answer": "B",
+  "explanation": "A Quarter Choke constricts the muzzle by about 0.25 mm. More constriction means a tighter shot pattern.",
+  "reel_explain": "A Quarter Choke constricts the muzzle by about 0.25 mm. More constriction means a tighter shot pattern.",
+  "source": "From FACToids of Forensic Ballistics and Physical Sciences · Q98",
+  "palette": 12
+ },
+ {
+  "id": "nd-20",
+  "tag": "UGC NET · PYQ 2019 · Q97",
+  "question": "A '12-bore' gun's barrel diameter is equal to:",
+  "options": [
+   "12 mm",
+   "The diameter of a lead ball weighing 1/12 lb",
+   "The diameter of a steel ball weighing 1/12 lb",
+   "12 inches"
+  ],
+  "answer": "B",
+  "explanation": "12 lead balls that exactly fit the bore weigh one pound, so each ball weighs 1/12 lb.",
+  "reel_explain": "12 lead balls that exactly fit the bore weigh one pound, so each ball weighs 1/12 lb.",
+  "source": "From NET-Cracker Module 6 · Ballistics",
+  "palette": 5
+ },
+ {
+  "id": "nd-21",
+  "tag": "FACT 2026 · Biology · Section B",
+  "question": "Which plant material is MOST likely to give a false-positive benzidine test for blood?",
+  "options": [
+   "Potato",
+   "Onion",
+   "Garlic",
+   "Horseradish"
+  ],
+  "answer": "D",
+  "explanation": "Horseradish is rich in peroxidase, which mimics haemoglobin's peroxidase-like activity in the test.",
+  "reel_explain": "Horseradish is rich in peroxidase, which mimics haemoglobin's peroxidase-like activity in the test.",
+  "source": "From FACToids of Forensic Biological Sciences · Q95",
+  "palette": 13
+ },
+ {
+  "id": "nd-22",
+  "tag": "UGC NET · PYQ 2019 · Q53",
+  "question": "Which of these is NOT part of computer scanning and digitisation of a fingerprint?",
+  "options": [
+   "Indexing",
+   "Restriction",
+   "Feature extraction",
+   "Segmentation"
+  ],
+  "answer": "B",
+  "explanation": "Digital processing uses segmentation, feature extraction and indexing. 'Restriction' is not a step.",
+  "reel_explain": "Digital processing uses segmentation, feature extraction and indexing. 'Restriction' is not a step.",
+  "source": "From NET-Cracker Module 5 · Fingerprints",
+  "palette": 7
+ },
+ {
+  "id": "nd-23",
+  "tag": "FACT 2026 · Biology · Section B",
+  "question": "After the 2017 expansion, how many STR loci are in the FBI's CODIS core panel?",
+  "options": [
+   "13",
+   "16",
+   "20",
+   "30"
+  ],
+  "answer": "C",
+  "explanation": "CODIS expanded from the original 13 core loci (1997) to 20 in 2017.",
+  "reel_explain": "CODIS expanded from the original 13 core loci (1997) to 20 in 2017.",
+  "source": "From FACToids of Forensic Biological Sciences · Q78",
+  "palette": 14
+ },
+ {
+  "id": "nd-24",
+  "tag": "UGC NET · PYQ 2020 · Q81",
+  "question": "Erased writing in which ink can be restored by sulphocyanic acid fuming?",
+  "options": [
+   "Printing inks",
+   "Iron base inks",
+   "Indian inks",
+   "Ball pen inks"
+  ],
+  "answer": "B",
+  "explanation": "Residual iron salts react with thiocyanate to form blood-red ferric thiocyanate, making the erased writing readable again.",
+  "reel_explain": "Residual iron salts react with thiocyanate to form blood-red ferric thiocyanate, making the erased writing readable again.",
+  "source": "From NET-Cracker Module 1 · Questioned Documents",
+  "palette": 8
+ },
+ {
+  "id": "nd-25",
+  "tag": "FACT 2026 · Biology · Section B",
+  "question": "Which one is NOT a stage of the hair growth cycle?",
+  "options": [
+   "Anagen",
+   "Catagen",
+   "Medullagen",
+   "Telogen"
+  ],
+  "answer": "C",
+  "explanation": "The real stages are anagen (growth), catagen (transition) and telogen (rest). 'Medullagen' is made up.",
+  "reel_explain": "The real stages are anagen (growth), catagen (transition) and telogen (rest). 'Medullagen' is made up.",
+  "source": "From FACToids of Forensic Biological Sciences · Q116",
+  "palette": 9
+ },
+ {
+  "id": "nd-26",
+  "tag": "UGC NET · PYQ 2018 · Q74",
+  "question": "Which technique is destructive in ink examination of a document?",
+  "options": [
+   "TLC (Thin Layer Chromatography)",
+   "VSC (Video Spectral Comparator)",
+   "ALS (Alternate Light Source)",
+   "IR microscopy"
+  ],
+  "answer": "A",
+  "explanation": "TLC needs a tiny plug of ink cut out and dissolved. VSC, ALS and IR examine the ink in place.",
+  "reel_explain": "TLC needs a tiny plug of ink cut out and dissolved. VSC, ALS and IR examine the ink in place.",
+  "source": "From NET-Cracker Module 1 · Questioned Documents",
+  "palette": 10
+ },
+ {
+  "id": "nd-27",
+  "tag": "FACT 2026 · Biology · Section B",
+  "question": "Which is a known PCR inhibitor found in stool samples?",
+  "options": [
+   "Hemoglobin",
+   "Urea",
+   "Bile salts",
+   "Bacteria"
+  ],
+  "answer": "C",
+  "explanation": "Bile salts interfere with the polymerase, so faecal evidence needs extra purification before DNA amplification.",
+  "reel_explain": "Bile salts interfere with the polymerase, so faecal evidence needs extra purification before DNA amplification.",
+  "source": "From FACToids of Forensic Biological Sciences · Q99",
+  "palette": 1
+ },
+ {
+  "id": "nd-28",
+  "tag": "UGC NET · PYQ 2021 · Q43",
+  "question": "A device that inks, embosses or perforates a money value onto a document is a:",
+  "options": [
+   "Photocopier",
+   "Check writer",
+   "Facsimile",
+   "Dandy roll"
+  ],
+  "answer": "B",
+  "explanation": "A check writer imprints the amount on cheques specifically to stop it being altered.",
+  "reel_explain": "A check writer imprints the amount on cheques specifically to stop it being altered.",
+  "source": "From NET-Cracker Module 1 · Questioned Documents",
+  "palette": 11
+ },
+ {
+  "id": "nd-29",
+  "tag": "FACT 2026 · Biology · Section B",
+  "question": "Which plant tissue is most useful in forensic wood identification?",
+  "options": [
+   "Parenchyma",
+   "Xylem",
+   "Phloem",
+   "Cambium"
+  ],
+  "answer": "B",
+  "explanation": "Xylem's vessels, tracheids and ray patterns differ between species, so it identifies the wood.",
+  "reel_explain": "Xylem's vessels, tracheids and ray patterns differ between species, so it identifies the wood.",
+  "source": "From FACToids of Forensic Biological Sciences · Q94",
+  "palette": 3
+ },
+ {
+  "id": "nd-30",
+  "tag": "UGC NET · PYQ 2024 · Q75",
+  "question": "Variation in line width from pressure on a flexible split nib is known as:",
+  "options": [
+   "Line quality",
+   "Shading",
+   "Pen pressure",
+   "Fundamental difference"
+  ],
+  "answer": "B",
+  "explanation": "Shading is the widening of a stroke from extra pressure on a flexible nib, not the same as overall pen pressure.",
+  "reel_explain": "Shading is the widening of a stroke from extra pressure on a flexible nib, not the same as overall pen pressure.",
+  "source": "From NET-Cracker Module 1 · Questioned Documents",
+  "palette": 12
+ }
+]
