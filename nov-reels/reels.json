@@ -1,26 +1,66 @@
 [
-{"id":"nov-r1","tag":"UGC NET · PYQ 2019 · Q69",
-"question":"Which of the following instruments is used to decipher indented writings?",
-"options":["Projectina","Video spectral comparator","Electrostatic detection apparatus","Densi box"],"answer":"C",
-"explanation":"ESDA is the standard instrument for visualising indented writing on the sheets beneath a written page, using electrostatic charge and toner.",
-"reel_explain":"ESDA (Electrostatic Detection Apparatus) reveals indented writing on the pages below a written sheet, using electrostatic charge and toner.",
-"source":"From NET-Cracker Module 1 · Questioned Documents"},
-{"id":"nov-r2","tag":"FACT 2026 · Biology · Section B",
-"question":"Washerwoman's skin appears in:",
-"options":["Hanging","Drowning","Burns","Electrocution"],"answer":"B",
-"explanation":"Pale, wrinkled, sodden skin on the palms and soles is a classic finding in bodies recovered after prolonged immersion in water.",
-"reel_explain":"Pale, wrinkled, sodden skin on palms and soles: a classic sign of a body kept long in water. It also helps estimate how long it was submerged.",
-"source":"From FACToids of Forensic Biological Sciences · Q83"},
-{"id":"nov-r3","tag":"UGC NET · PYQ 2021 · Q34",
-"question":"Which of the following viruses evade detection by using a sophisticated form of encryption?",
-"options":["Stealth virus","Multipartite virus","Companion virus","Polymorphic virus"],"answer":"D",
-"explanation":"A polymorphic virus changes/encrypts its own code each time it replicates, so its signature never looks the same twice.",
-"reel_explain":"A polymorphic virus encrypts its own code differently on every infection, so its signature never looks the same twice.",
-"source":"From NET-Cracker Module 9 · Digital & Cyber Forensics (free)"},
-{"id":"nov-r4","tag":"FACT 2026 · Biology · Section B",
-"question":"Cherry red coloration of hypostasis is seen in:",
-"options":["Cyanide poisoning","CO poisoning","Organophosphate poisoning","Arsenic poisoning"],"answer":"B",
-"explanation":"Carbon monoxide binds haemoglobin far more strongly than oxygen, forming bright-red carboxyhaemoglobin that colours the pooled blood.",
-"reel_explain":"CO binds haemoglobin far more strongly than oxygen, forming bright-red carboxyhaemoglobin, so post-mortem lividity turns cherry red.",
-"source":"From FACToids of Forensic Biological Sciences · Q82"}
+ {
+  "id": "nov-r1",
+  "tag": "UGC NET · PYQ 2019 · Q69",
+  "question": "Which of the following instruments is used to decipher indented writings?",
+  "options": [
+   "Projectina",
+   "Video spectral comparator",
+   "Electrostatic detection apparatus",
+   "Densi box"
+  ],
+  "answer": "C",
+  "explanation": "ESDA is the standard instrument for visualising indented writing on the sheets beneath a written page, using electrostatic charge and toner.",
+  "reel_explain": "ESDA (Electrostatic Detection Apparatus) reveals indented writing on the pages below a written sheet, using electrostatic charge and toner.",
+  "source": "From NET-Cracker Module 1 · Questioned Documents",
+  "palette": 3
+ },
+ {
+  "id": "nov-r2",
+  "tag": "FACT 2026 · Biology · Section B",
+  "question": "Washerwoman's skin appears in:",
+  "options": [
+   "Hanging",
+   "Drowning",
+   "Burns",
+   "Electrocution"
+  ],
+  "answer": "B",
+  "explanation": "Pale, wrinkled, sodden skin on the palms and soles is a classic finding in bodies recovered after prolonged immersion in water.",
+  "reel_explain": "Pale, wrinkled, sodden skin on palms and soles: a classic sign of a body kept long in water. It also helps estimate how long it was submerged.",
+  "source": "From FACToids of Forensic Biological Sciences · Q83",
+  "palette": 6
+ },
+ {
+  "id": "nov-r3",
+  "tag": "UGC NET · PYQ 2021 · Q34",
+  "question": "Which of the following viruses evade detection by using a sophisticated form of encryption?",
+  "options": [
+   "Stealth virus",
+   "Multipartite virus",
+   "Companion virus",
+   "Polymorphic virus"
+  ],
+  "answer": "D",
+  "explanation": "A polymorphic virus changes/encrypts its own code each time it replicates, so its signature never looks the same twice.",
+  "reel_explain": "A polymorphic virus encrypts its own code differently on every infection, so its signature never looks the same twice.",
+  "source": "From NET-Cracker Module 9 · Digital & Cyber Forensics (free)",
+  "palette": 9
+ },
+ {
+  "id": "nov-r4",
+  "tag": "FACT 2026 · Biology · Section B",
+  "question": "Cherry red coloration of hypostasis is seen in:",
+  "options": [
+   "Cyanide poisoning",
+   "CO poisoning",
+   "Organophosphate poisoning",
+   "Arsenic poisoning"
+  ],
+  "answer": "B",
+  "explanation": "Carbon monoxide binds haemoglobin far more strongly than oxygen, forming bright-red carboxyhaemoglobin that colours the pooled blood.",
+  "reel_explain": "CO binds haemoglobin far more strongly than oxygen, forming bright-red carboxyhaemoglobin, so post-mortem lividity turns cherry red.",
+  "source": "From FACToids of Forensic Biological Sciences · Q82",
+  "palette": 2
+ }
 ]

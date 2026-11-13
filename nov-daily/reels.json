@@ -12,7 +12,8 @@
   "answer": "D",
   "explanation": "Ethanol competes with methanol for alcohol dehydrogenase, blocking its conversion into toxic formaldehyde and formic acid.",
   "reel_explain": "Ethanol competes with methanol for alcohol dehydrogenase, blocking its conversion into toxic formaldehyde and formic acid.",
-  "source": "From NET-Cracker Module 4 · Toxicology"
+  "source": "From NET-Cracker Module 4 · Toxicology",
+  "palette": 0
  },
  {
   "id": "nd-15",
@@ -27,7 +28,8 @@
   "answer": "C",
   "explanation": "Impact angle = sin⁻¹(width ÷ length) = sin⁻¹(8/16) = sin⁻¹(0.5) = 30°.",
   "reel_explain": "Impact angle = sin⁻¹(width ÷ length) = sin⁻¹(8/16) = sin⁻¹(0.5) = 30°.",
-  "source": "From FACToids of Forensic Biological Sciences · Q54"
+  "source": "From FACToids of Forensic Biological Sciences · Q54",
+  "palette": 1
  },
  {
   "id": "nd-16",
@@ -42,7 +44,8 @@
   "answer": "B",
   "explanation": "Diacritics are the small dots and cross-strokes added to letters; their placement and shape are habitual and compared closely.",
   "reel_explain": "Diacritics are the small dots and cross-strokes added to letters; their placement and shape are habitual and compared closely.",
-  "source": "From NET-Cracker Module 1 · Questioned Documents"
+  "source": "From NET-Cracker Module 1 · Questioned Documents",
+  "palette": 10
  },
  {
   "id": "nd-17",
@@ -57,7 +60,8 @@
   "answer": "D",
   "explanation": "IgG is the only antibody class that crosses the placenta, which is why it causes haemolytic disease of the newborn.",
   "reel_explain": "IgG is the only antibody class that crosses the placenta, which is why it causes haemolytic disease of the newborn.",
-  "source": "From FACToids of Forensic Biological Sciences · Q90"
+  "source": "From FACToids of Forensic Biological Sciences · Q90",
+  "palette": 2
  },
  {
   "id": "nd-18",
@@ -72,7 +76,8 @@
   "answer": "A",
   "explanation": "Google's Find My Device can remotely lock or wipe a lost Android phone. iCloud is Apple's equivalent.",
   "reel_explain": "Google's Find My Device can remotely lock or wipe a lost Android phone. iCloud is Apple's equivalent.",
-  "source": "From NET-Cracker Module 9 · Cyber Forensics (free)"
+  "source": "From NET-Cracker Module 9 · Cyber Forensics (free)",
+  "palette": 11
  },
  {
   "id": "nd-19",
@@ -87,7 +92,8 @@
   "answer": "B",
   "explanation": "A Quarter Choke constricts the muzzle by about 0.25 mm. More constriction means a tighter shot pattern.",
   "reel_explain": "A Quarter Choke constricts the muzzle by about 0.25 mm. More constriction means a tighter shot pattern.",
-  "source": "From FACToids of Forensic Ballistics and Physical Sciences · Q98"
+  "source": "From FACToids of Forensic Ballistics and Physical Sciences · Q98",
+  "palette": 4
  },
  {
   "id": "nd-20",
@@ -102,7 +108,8 @@
   "answer": "B",
   "explanation": "12 lead balls that exactly fit the bore weigh one pound, so each ball weighs 1/12 lb.",
   "reel_explain": "12 lead balls that exactly fit the bore weigh one pound, so each ball weighs 1/12 lb.",
-  "source": "From NET-Cracker Module 6 · Ballistics"
+  "source": "From NET-Cracker Module 6 · Ballistics",
+  "palette": 5
  },
  {
   "id": "nd-21",
@@ -117,7 +124,8 @@
   "answer": "D",
   "explanation": "Horseradish is rich in peroxidase, which mimics haemoglobin's peroxidase-like activity in the test.",
   "reel_explain": "Horseradish is rich in peroxidase, which mimics haemoglobin's peroxidase-like activity in the test.",
-  "source": "From FACToids of Forensic Biological Sciences · Q95"
+  "source": "From FACToids of Forensic Biological Sciences · Q95",
+  "palette": 12
  },
  {
   "id": "nd-22",
@@ -132,7 +140,8 @@
   "answer": "B",
   "explanation": "Digital processing uses segmentation, feature extraction and indexing. 'Restriction' is not a step.",
   "reel_explain": "Digital processing uses segmentation, feature extraction and indexing. 'Restriction' is not a step.",
-  "source": "From NET-Cracker Module 5 · Fingerprints"
+  "source": "From NET-Cracker Module 5 · Fingerprints",
+  "palette": 7
  },
  {
   "id": "nd-23",
@@ -147,7 +156,8 @@
   "answer": "C",
   "explanation": "CODIS expanded from the original 13 core loci (1997) to 20 in 2017.",
   "reel_explain": "CODIS expanded from the original 13 core loci (1997) to 20 in 2017.",
-  "source": "From FACToids of Forensic Biological Sciences · Q78"
+  "source": "From FACToids of Forensic Biological Sciences · Q78",
+  "palette": 13
  },
  {
   "id": "nd-24",
@@ -162,7 +172,8 @@
   "answer": "B",
   "explanation": "Residual iron salts react with thiocyanate to form blood-red ferric thiocyanate, making the erased writing readable again.",
   "reel_explain": "Residual iron salts react with thiocyanate to form blood-red ferric thiocyanate, making the erased writing readable again.",
-  "source": "From NET-Cracker Module 1 · Questioned Documents"
+  "source": "From NET-Cracker Module 1 · Questioned Documents",
+  "palette": 8
  },
  {
   "id": "nd-25",
@@ -177,7 +188,8 @@
   "answer": "C",
   "explanation": "The real stages are anagen (growth), catagen (transition) and telogen (rest). 'Medullagen' is made up.",
   "reel_explain": "The real stages are anagen (growth), catagen (transition) and telogen (rest). 'Medullagen' is made up.",
-  "source": "From FACToids of Forensic Biological Sciences · Q116"
+  "source": "From FACToids of Forensic Biological Sciences · Q116",
+  "palette": 14
  },
  {
   "id": "nd-26",
@@ -192,7 +204,8 @@
   "answer": "A",
   "explanation": "TLC needs a tiny plug of ink cut out and dissolved. VSC, ALS and IR examine the ink in place.",
   "reel_explain": "TLC needs a tiny plug of ink cut out and dissolved. VSC, ALS and IR examine the ink in place.",
-  "source": "From NET-Cracker Module 1 · Questioned Documents"
+  "source": "From NET-Cracker Module 1 · Questioned Documents",
+  "palette": 0
  },
  {
   "id": "nd-27",
@@ -207,7 +220,8 @@
   "answer": "C",
   "explanation": "Bile salts interfere with the polymerase, so faecal evidence needs extra purification before DNA amplification.",
   "reel_explain": "Bile salts interfere with the polymerase, so faecal evidence needs extra purification before DNA amplification.",
-  "source": "From FACToids of Forensic Biological Sciences · Q99"
+  "source": "From FACToids of Forensic Biological Sciences · Q99",
+  "palette": 1
  },
  {
   "id": "nd-28",
@@ -222,7 +236,8 @@
   "answer": "B",
   "explanation": "A check writer imprints the amount on cheques specifically to stop it being altered.",
   "reel_explain": "A check writer imprints the amount on cheques specifically to stop it being altered.",
-  "source": "From NET-Cracker Module 1 · Questioned Documents"
+  "source": "From NET-Cracker Module 1 · Questioned Documents",
+  "palette": 15
  },
  {
   "id": "nd-29",
@@ -237,7 +252,8 @@
   "answer": "B",
   "explanation": "Xylem's vessels, tracheids and ray patterns differ between species, so it identifies the wood.",
   "reel_explain": "Xylem's vessels, tracheids and ray patterns differ between species, so it identifies the wood.",
-  "source": "From FACToids of Forensic Biological Sciences · Q94"
+  "source": "From FACToids of Forensic Biological Sciences · Q94",
+  "palette": 3
  },
  {
   "id": "nd-30",
@@ -252,6 +268,7 @@
   "answer": "B",
   "explanation": "Shading is the widening of a stroke from extra pressure on a flexible nib, not the same as overall pen pressure.",
   "reel_explain": "Shading is the widening of a stroke from extra pressure on a flexible nib, not the same as overall pen pressure.",
-  "source": "From NET-Cracker Module 1 · Questioned Documents"
+  "source": "From NET-Cracker Module 1 · Questioned Documents",
+  "palette": 10
  }
 ]
